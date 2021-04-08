@@ -1,0 +1,416 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Global Variables */
+:root {
+    --white: #FAFAFA;
+    --black: #18181B;
+    --primary: #0B5ED7;
+    --secondary: #5C636A;
+    --success: #10B981;
+    --danger: #EF4444;
+    --warning: #EAB308;
+    --dark: #1C1F23 ;
+    --info: #0EA5E9;
+    --link: #1D4ED8;
+    --grey: #E5E7EB;
+
+}
+/* Default Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+/* ---------- AVATAR ---------- */
+.avatar {
+    border-radius: 50%;
+    width: 4.5rem;
+    object-fit: cover;
+}
+
+/* ----------- BADGE ---------- */
+.badge {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--danger);
+    padding: 0.25rem;
+    font-size: xx-small;
+    border-radius: 0.25rem;
+    bottom: 2.4rem;
+    right: 1.5rem;
+}
+
+.badge-avatar {
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--danger);
+    padding: 0.25rem;
+    font-size: xx-small;
+    border-radius: 50%;
+    bottom: 3.6rem;
+    right: 1.5rem;
+}
+
+/* ---------- ALERTS ---------- */
+.alert {
+    position: relative;
+    width: 80%;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-btn {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.alert-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.alert-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.alert-dark {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.alert-success {
+    background-color: var(--success);
+    color: var(--white);
+}
+
+.alert-danger {
+    background-color: var(--danger);
+    color: var(--white);
+}
+
+.alert-warning {
+    background-color: var(--warning);
+    color: var(--black);
+}
+
+.alert-info {
+    background-color: var(--info);
+    color: var(--white);
+}
+
+
+/* ---------- BUTTON ---------- */
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 0.8rem 1.4rem;
+    margin: 1rem 0.5rem;
+    border-radius: 0.25rem;
+    min-width: 6rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-dark {
+    background-color: var(--dark);
+    color: var(--white)
+}
+
+.btn-success {
+    background-color: var(--success);
+    color: var(--white);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: var(--white);
+}
+
+.btn-warning {
+    background-color: var(--warning);
+    color: var(--black);
+}
+
+.btn-info {
+    background-color: var(--info);
+    color: var(--white);
+}
+
+.btn-block {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-link {
+    background-color: var(--white);
+    color: var(--link);
+}
+
+.btn-fab {
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: 50%;
+    min-width: auto;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 20px grey;
+    width: 15rem;
+    margin: 1rem;
+}
+
+.card-img-top {
+    flex-shrink: 0;
+    width: 100%;
+    border-style: none;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.price {
+    font-family:monospace;
+}
+
+/* ---------- IMAGES ---------- */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+
+/* ---------- INPUT ---------- */
+.input {
+    border: none;
+    background-color: var(--grey);
+    padding: 1rem;
+    outline: none;
+    font-style: inherit;
+    font-size: 1.2rem;
+}
+
+/* ---------- NAVIGATION ---------- */
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.nav-primary {
+    background-color: var(--primary);
+    color: var(--white);
+} 
+
+.nav-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.nav-dark {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.nav-brand {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-link-container {
+    margin-left: auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    margin: 0.5rem;
+}
+
+/* ---------- SPACING CLASSES ---------- */
+
+/* Padding Classes */
+.p-1 {
+    padding: 1rem !important;
+}
+
+.px-1 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.py-1 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.p-2 {
+    padding: 2rem !important;
+}
+
+.px-2 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+.py-2 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.p-3 {
+    padding: 3rem !important;
+}
+
+.px-3 {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.py-3 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.p-4 {
+    padding: 4rem !important;
+}
+
+.px-4 {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+}
+
+.py-4 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* Margin Classes */
+.m-1 {
+    margin: 1rem !important;
+}
+
+.mx-1 {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+}
+
+.my-1 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.m-2 {
+    margin: 2rem !important;
+}
+
+.mx-2 {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+}
+
+.my-2 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.m-3 {
+    margin: 3rem !important;
+}
+
+.mx-3 {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+}
+
+.my-3 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.m-4 {
+    margin: 4rem !important;
+}
+
+.mx-4 {
+    margin-left: 4rem !important;
+    margin-right: 4rem !important;
+}
+
+.my-4 {
+    margin-top: 4rem !important;
+    margin-bottom: 4rem !important;
+}
+
+/* -------- TYPOGRAPHY --------- */
+.display-1 {
+    font-size: 4.5rem;
+}
+
+.display-2 {
+    font-size: 4rem;
+}
+
+.display-3 {
+    font-size: 3.5rem;
+}
+
+.display-4 {
+    font-size: 3rem;
+}
+
+.display-5 {
+    font-size: 2.5rem;
+}
+
+.display-6 {
+    font-size: 2rem;
+}
+
+.lead {
+    font-size: 1.3rem;
+}
+
+.center {
+    text-align: center;
+}
