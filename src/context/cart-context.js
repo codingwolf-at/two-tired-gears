@@ -24,10 +24,18 @@ const itemsInCart = [];
 // reducer
 const cartReducer = (state, action) => {
   switch (action.type) {
-    case "ADD":
+    case "ADD_TO_CART":
       return {
         ...state,
         itemsInCart: [...state.itemsInCart, action.payload]
+      };
+
+    case "REMOVE_FROM_CART":
+      return {
+        ...state,
+        itemsInCart: state.itemsInCart.filter(
+          (item) => item.id !== action.payload.id
+        )
       };
 
     case "INCREMENT":
@@ -47,14 +55,6 @@ const cartReducer = (state, action) => {
           item.id === action.payload.id
             ? { ...item, quantity: item.quantity - 1 }
             : item
-        )
-      };
-
-    case "REMOVE":
-      return {
-        ...state,
-        itemsInCart: state.itemsInCart.filter(
-          (item) => item.id !== action.payload.id
         )
       };
 
