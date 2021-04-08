@@ -1,4 +1,5 @@
 .product-listing {
+  padding: 1rem 0rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
