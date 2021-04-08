@@ -1,2 +1,3 @@
-# two-tired-gears
- A motorbike protective riding gear shop made using MERN stack.
+# Two Tired Gears
+
+ A motorbike protective riding gear shop website made using MERN stack.
