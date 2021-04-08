@@ -3,7 +3,7 @@ import Header from "../Header/Header"
 import "./product-listing.css";
 
 const ProductListing = () => {
-  const {products} = useCart();
+  const {products, dispatch} = useCart();
   return (
     <div>
       <Header />  
@@ -17,7 +17,7 @@ const ProductListing = () => {
                     <h2>{product.name}</h2>
                     <h4>Price: {product.price}/-</h4>
                   </div>
-                  <button class="btn btn-primary btn-block">ADD TO CART</button>
+                  <button onClick={() => dispatch({type: "ADD_TO_CART", payload: product})} class="btn btn-primary btn-block">ADD TO CART</button>
               </div>
             </div>
           ))
