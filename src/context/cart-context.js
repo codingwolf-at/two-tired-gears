@@ -67,7 +67,7 @@ const cartReducer = (state, action) => {
 const products = [
   {
     id: 1,
-    name: "SCORPION EXO-490 TOUR WHITE BLUE",
+    name: "SCORPION EXO-490 TOUR",
     price: 13999,
     category: "helmet",
     url: "https://cdn.shopify.com/s/files/1/0049/4226/6483/products/49-326-74-04_1024x1024_bea86405-ecf1-4cf7-8840-8d81e63dae12_400x400.png?v=1617879667",
@@ -75,7 +75,7 @@ const products = [
   },
   {
     id: 2,
-    name: "SCORPION EXO-1400 AIR CARBON BEAUX WHITE YELLOW",
+    name: "SCORPION EXO-1400 AIR CARBON",
     price: 37999,
     category: "helmet",
     url: "https://cdn.shopify.com/s/files/1/0049/4226/6483/products/a_scorpionexo1400carba_beaux_whineoyel_getstung_1024x1024_2aef7437-ae25-4641-ac95-3049952460b1_400x400.png?v=1610709500",
