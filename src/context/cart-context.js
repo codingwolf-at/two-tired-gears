@@ -9,16 +9,17 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, { itemsInCart });
+  const [state, dispatch] = useReducer(cartReducer, { itemsInCart, route });
   return (
     <CartContext.Provider
-      value={{ products, itemsInCart: state.itemsInCart, dispatch }}
+      value={{ products, itemsInCart: state.itemsInCart, dispatch, route: state.route }}
     >
       {children}
     </CartContext.Provider>
   );
 };
 
+const route = "products";
 const itemsInCart = [];
 
 // reducer
@@ -57,6 +58,12 @@ const cartReducer = (state, action) => {
             : item
         )
       };
+
+    case "ROUTE": 
+      return {
+        ...state,
+        route: action.payload
+      }
 
     default:
       return state;
