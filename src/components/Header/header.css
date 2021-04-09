@@ -5,3 +5,8 @@
 .nav-brand {
   font-size: 1.8rem;
 }
+
+img {
+  width: 4rem;
+  margin-right: 0.5rem;
+}
