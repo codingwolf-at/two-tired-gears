@@ -9,16 +9,18 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, { itemsInCart, route });
+  const [state, dispatch] = useReducer(cartReducer, { itemsInCart, route, wishList });
   return (
     <CartContext.Provider
-      value={{ products, itemsInCart: state.itemsInCart, dispatch, route: state.route }}
+      value={{ products, itemsInCart: state.itemsInCart, dispatch, route: state.route, wishList: state.wishList }}
     >
       {children}
     </CartContext.Provider>
   );
 };
 
+// initial values
+const wishList = [];
 const route = "products";
 const itemsInCart = [];
 
@@ -59,6 +61,20 @@ const cartReducer = (state, action) => {
         )
       };
 
+    case "ADD_TO_WISHLIST":
+      return {
+        ...state,
+        wishList: [...state.wishList, action.payload]
+      };
+
+    case "REMOVE_FROM_WISHLIST":
+      return {
+        ...state,
+        itemsInCart: state.itemsInCart.filter(
+          (item) => item.id !== action.payload.id
+        )
+      };
+
     case "ROUTE": 
       return {
         ...state,
@@ -70,7 +86,7 @@ const cartReducer = (state, action) => {
   }
 };
 
-// initial value
+// all products
 const products = [
   {
     id: 1,
