@@ -16,6 +16,7 @@ export const ProductListing = () => {
                     <h4>Price: {product.price}/-</h4>
                   </div>
                   <button onClick={() => dispatch({type: "ADD_TO_CART", payload: product})} class="btn btn-primary btn-block">ADD TO CART</button>
+                  <button onClick={() => dispatch({type: "ADD_TO_WISHLIST", payload: product})} class="btn btn-secondary btn-block">ADD TO WISHLIST</button>
               </div>
             </div>
           ))
