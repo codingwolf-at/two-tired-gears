@@ -1,12 +1,10 @@
 import { useCart } from "../../context/cart-context";
-import Header from "../Header/Header"
 import "./product-listing.css";
 
-const ProductListing = () => {
+export const ProductListing = () => {
   const {products, dispatch} = useCart();
   return (
     <div>
-      <Header />  
       <main className="product-listing">
         {
           products.map(product => (
@@ -26,5 +24,3 @@ const ProductListing = () => {
     </div>
   )
 }
-
-export default ProductListing;
