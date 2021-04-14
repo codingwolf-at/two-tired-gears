@@ -7,10 +7,10 @@ export const useCart = () => {
 };
 
 export const CartProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(cartReducer, { itemsInCart, route, wishList });
+  const [state, dispatch] = useReducer(cartReducer, { itemsInCart, wishList });
   return (
     <CartContext.Provider
-      value={{ products, itemsInCart: state.itemsInCart, dispatch, route: state.route, wishList: state.wishList }}
+      value={{ products, itemsInCart: state.itemsInCart, dispatch, wishList: state.wishList }}
     >
       {children}
     </CartContext.Provider>
@@ -19,7 +19,6 @@ export const CartProvider = ({ children }) => {
 
 // initial values
 const wishList = [];
-const route = "products";
 const itemsInCart = [];
 
 // reducer
@@ -72,12 +71,6 @@ const cartReducer = (state, action) => {
           (item) => item.id !== action.payload.id
         )
       };
-
-    case "ROUTE": 
-      return {
-        ...state,
-        route: action.payload
-      }
 
     default:
       return state;
