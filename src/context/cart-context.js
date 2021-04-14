@@ -1,6 +1,4 @@
 import { createContext, useContext, useReducer } from "react";
-import { mockServer } from "../api/mock-server";
-mockServer();
 
 export const CartContext = createContext();
 
