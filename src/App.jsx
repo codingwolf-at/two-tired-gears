@@ -1,17 +1,17 @@
 import './App.css';
+import { Routes, Route } from "react-router-dom";
 import {ProductListing, Header, Cart, Wishlist} from "./components"
-import { useCart } from './context/cart-context';
 
 function App() {
-
-  const { route } = useCart();
 
   return (
     <div className="App">
       <Header />
-      {route === "products" && <ProductListing />}
-      {route === "cart" && <Cart />}
-      {route === "wishlist" && <Wishlist />}
+      <Routes>
+        <Route path="/" element={<ProductListing />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+      </Routes>
     </div>
   );
 }
