@@ -68,7 +68,7 @@ const cartReducer = (state, action) => {
     case "REMOVE_FROM_WISHLIST":
       return {
         ...state,
-        itemsInCart: state.itemsInCart.filter(
+        wishList: state.wishList.filter(
           (item) => item.id !== action.payload.id
         )
       };
