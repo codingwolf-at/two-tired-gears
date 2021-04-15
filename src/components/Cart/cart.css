@@ -1,0 +1,20 @@
+.cart {
+  padding: 1rem;
+}
+
+.cart-listing {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.qty-text {
+  font-weight: 500;
+  display: block;
+  text-align: center;
+}

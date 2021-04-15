@@ -1,0 +1,16 @@
+.nav {
+  padding: 0.8rem;
+}
+
+.nav-brand {
+  font-size: 1.8rem;
+}
+
+.nav-link-container {
+  margin-right: 2rem;
+}
+
+img {
+  width: 4rem;
+  margin-right: 0.5rem;
+}
