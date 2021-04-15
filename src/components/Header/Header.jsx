@@ -15,7 +15,7 @@ export const Header = () => {
       <img src={siteLogo} alt="site-logo"/>
       <span class="nav-brand">Two Tired Gears</span>
       <div class="nav-link-container">
-        <NavLink className="nav-link" to="/" activeStyle={activeStyle} >Products</NavLink>
+        <NavLink end className="nav-link" to="/" activeStyle={activeStyle} >Products</NavLink>
         <NavLink className="nav-link" to="/cart" activeStyle={activeStyle} >Cart | {itemsInCart.length}</NavLink>
         <NavLink className="nav-link" to="/wishlist" activeStyle={activeStyle} >Wishlist | {wishList.length}</NavLink>
       </div>
