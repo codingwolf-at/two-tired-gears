@@ -1,0 +1,16 @@
+.product-listing {
+  padding: 1rem 0rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+fieldset {
+  max-width: 50%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+label {
+  margin: 1rem;
+}
